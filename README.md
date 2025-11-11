@@ -21,7 +21,7 @@ Hotel cancellation becoming more unpredictable, due to increasing cancellation r
 ![Dashboard Preview](tableau_images/booking_cancellation_rate_monitor.png)
 ![Dashboard Preview](tableau_images/booking_cancellation_rate_monitor2.png)
 
-## log regression with custom weight class
+## K nearest neighbours model (with imbalance handling on dataset)
 ![Dashboard Preview](tableau_images/knn_with_smote.png)
 
 ## log regression with custom weight class
