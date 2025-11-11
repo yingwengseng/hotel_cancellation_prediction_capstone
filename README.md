@@ -34,5 +34,5 @@ In the hotel industry, it is equally important to prioritise precision as false 
 
 ## Recommendation to hotel management: 
 - only allow half of the total predicted cancelled rooms from the ML model to be overbooked due to model 49% precision
-- this is to control keep operational risks under control and maintain low potential operational cost contributed by customers that were predicted to cancel but do turn up (avoid unneccesary room upgrades or client dissatisfaction)
+- this is to keep operational risks under control and maintain low potential operational cost contributed by customers that were predicted to cancel but do turn up (avoid unneccesary room upgrades or client dissatisfaction)
 - only apply prediction model for less premium room, to avoid huge reputation damage and monetory loss
