@@ -42,6 +42,12 @@ In the hotel industry, it is equally important to prioritise precision as false 
 - Achieve 49% precision but improved recall to 71%
 - Logistic Regression only achieve 60% with 49% precision
 
+## random forest evaluation
+- precision and recall behaviour vs max depth
+![Dashboard Preview](tableau_images/precision_and_recall_vs%20_max_depth.png)
+- confusion matrix
+![Dashboard Preview](tableau_images/randomforest_cm.png)
+
 ## hyperparameter for random forest as below
 rf = RandomForestClassifier(
     n_estimators=200,          
