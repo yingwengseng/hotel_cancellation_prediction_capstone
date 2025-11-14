@@ -44,7 +44,7 @@ In the hotel industry, it is equally important to prioritise precision as false 
 
 ## random forest evaluation
 - precision and recall behaviour vs max depth
-![Dashboard Preview](tableau_images/precision_and_recall_vs%20_max_depth.png)
+![Dashboard Preview](tableau_images/precision_and_recall_vs_max_depth.png)
 - confusion matrix
 ![Dashboard Preview](tableau_images/randomforest_cm.png)
 
