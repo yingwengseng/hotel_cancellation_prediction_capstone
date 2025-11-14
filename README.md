@@ -39,8 +39,8 @@ In the hotel industry, it is equally important to prioritise precision as false 
 
 ## (UPDATED)Testing with Random Forest (refer to 4_3 ipynb)
 - evaluation turn out better
-- Achieve 49% precision but improved recall to 71%
-- Logistic Regression only achieve 60% with 49% precision
+- Achieve improved recall to 71% with 49% precision
+- Logistic Regression only achieve 60% recall with 49% precision
 
 ## random forest evaluation
 - precision and recall behaviour vs max depth
