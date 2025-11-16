@@ -27,16 +27,6 @@ Hotel cancellation becoming more unpredictable, due to increasing cancellation r
 ## log regression with custom weight class
 ![Dashboard Preview](tableau_images/log_regression_custom_weight.png)
 
-## conclusion
-Best prediction model using log regression. Both KNN and log regression has recall score of 0.60 but log regression achieved higher precision at 49% while KNN model achieved 45%. 
-
-In the hotel industry, it is equally important to prioritise precision as false alarms(predicting cancellation wrongly) will lead to costlier damage which includes reputational damage. While opeartional effeciency is important to improve hotel revenue, reputation of the hotel should not be compromised. Hotel room overbooking strategy needs to be executed delicately. 
-
-## Recommendation to hotel management: 
-- only allow half of the total predicted cancelled rooms from the ML model to be overbooked due to model 49% precision
-- this is to keep operational risks under control and maintain low potential operational cost contributed by customers that were predicted to cancel but do turn up (avoid unneccesary room upgrades or client dissatisfaction)
-- only apply prediction model for less premium room, to avoid huge reputation damage and monetory loss
-
 ## (UPDATED)Testing with Random Forest (refer to 4_3 ipynb)
 - evaluation turn out better
 - Achieve improved recall to 71% with 49% precision
@@ -58,3 +48,39 @@ rf = RandomForestClassifier(
     class_weight='balanced', 
     random_state=42
 )
+
+## random forest evaluation
+- precision and recall behaviour vs max depth
+![Dashboard Preview](tableau_images/xgboost_recall_precision_maxdepth_graph.png)
+- confusion matrix
+![Dashboard Preview](tableau_images/xgboost_cm.png)
+
+## hyperparameter for XGBoost as below
+xgb = XGBClassifier(
+    objective='binary:logistic',
+    n_estimators=400,
+    learning_rate=0.3,
+    max_depth=5,
+    random_state=42,
+    eval_metric='logloss',
+    reg_lambda = 10,
+    scale_pos_weight=scale_pos_weight
+)
+
+## summarised evalutaion
+KNN             - acc:0.69, recall: 0.60, precision:0.45
+log regression  - acc:0.71, recall: 0.60, precision:0.49 
+random forest   - acc:0.71, recall: 0.71, precision:0.49 
+xgboost         - acc:0.69, recall: 0.76, precision:0.46 
+
+
+## conclusion
+Best prediction model using random forest. Random forest achieved the best balance between precision and recall. Achieving 49% precision and 71% recall.  
+
+In the hotel industry, it is equally important to prioritise precision as false alarms(predicting cancellation wrongly) will lead to costlier damage which includes reputational damage. While opeartional effeciency is important to improve hotel revenue, reputation of the hotel should not be compromised. Hotel room overbooking strategy needs to be executed delicately. 
+
+## Recommendation to hotel management: 
+- only allow half of the total predicted cancelled rooms from the ML model to be overbooked due to model 49% precision
+- this is to keep operational risks under control and maintain low potential operational cost contributed by customers that were predicted to cancel but do turn up (avoid unneccesary room upgrades or client dissatisfaction)
+- only apply prediction model for less premium room, to avoid huge reputation damage and monetory loss
+
