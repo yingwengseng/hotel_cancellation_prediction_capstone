@@ -56,22 +56,22 @@ rf = RandomForestClassifier(
 ![Dashboard Preview](tableau_images/xgboost_cm.png)
 
 ## hyperparameter for XGBoost as below
-xgb = XGBClassifier(
-    objective='binary:logistic',
-    n_estimators=400,
-    learning_rate=0.3,
-    max_depth=5,
-    random_state=42,
-    eval_metric='logloss',
-    reg_lambda = 10,
-    scale_pos_weight=scale_pos_weight
+xgb = XGBClassifier(  
+    objective='binary:logistic',  
+    n_estimators=400,  
+    learning_rate=0.3,  
+    max_depth=5,  
+    random_state=42,  
+    eval_metric='logloss',  
+    reg_lambda = 10,  
+    scale_pos_weight=scale_pos_weight  
 )
 
 ## summarised evalutaion
-KNN             - acc:0.69, recall: 0.60, precision:0.45
-log regression  - acc:0.71, recall: 0.60, precision:0.49 
-random forest   - acc:0.71, recall: 0.71, precision:0.49 
-xgboost         - acc:0.69, recall: 0.76, precision:0.46 
+KNN             - acc:0.69, recall: 0.60, precision:0.45  
+log regression  - acc:0.71, recall: 0.60, precision:0.49   
+random forest   - acc:0.71, recall: 0.71, precision:0.49   
+xgboost         - acc:0.69, recall: 0.76, precision:0.46   
 
 
 ## conclusion
