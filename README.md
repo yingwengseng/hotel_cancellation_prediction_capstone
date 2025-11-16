@@ -49,7 +49,7 @@ rf = RandomForestClassifier(
     random_state=42
 )
 
-## random forest evaluation
+## XGBoost evaluation (refer to 4_4 ipynb)
 - precision and recall behaviour vs max depth
 ![Dashboard Preview](tableau_images/xgboost_recall_precision_maxdepth_graph.png)
 - confusion matrix
